@@ -4,3 +4,4 @@ function makePowerFunction(exponent) {
 
 const squaredNumber = makePowerFunction(2);
 
+export default squaredNumber

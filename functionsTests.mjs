@@ -16,3 +16,4 @@ tests.isNotANumber(squaredNumber(undefined),NaN, "Squared number of undefined sh
 // Edge Cases
 tests.isEqual(squaredNumber(Infinity), Infinity, "Squared number of infinity should be infinity");
 tests.isEqual(squaredNumber(-Infinity), Infinity, "Squared number of -infinity should be infinity");
+tests.isEqual(squaredNumber(0), 0, "Squared number of 0 should be 0");

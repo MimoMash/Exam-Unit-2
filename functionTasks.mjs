@@ -10,6 +10,10 @@ function makePowerFunction(exponent) {
     };
 }
 
+function inchesToMillimeter(inches) {
+    return inches * 25.4;
+}
+
 const squaredNumber = makePowerFunction(2);
 
-export default squaredNumber
+export { squaredNumber, inchesToMillimeter }

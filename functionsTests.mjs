@@ -12,4 +12,5 @@ tests.isEqual(squaredNumber(2.5), 6.25, "Squared number of 2.5 should be 6.25");
 // Invalid Inputs
 tests.isNotANumber(squaredNumber(null), NaN, "Squared number of '2' should be NaN");
 tests.isNotANumber(squaredNumber(NaN), NaN, "Squared number of NaN should be NaN");
+tests.isNotANumber(squaredNumber(undefined),NaN, "Squared number of undefined should be NaN");
 // Edge Cases

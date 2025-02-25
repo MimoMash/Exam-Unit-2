@@ -11,4 +11,5 @@ tests.isEqual(squaredNumber(-3), 9, "Squared number of -3 should be 9");
 tests.isEqual(squaredNumber(2.5), 6.25, "Squared number of 2.5 should be 6.25");
 // Invalid Inputs
 tests.isNotANumber(squaredNumber(null), NaN, "Squared number of '2' should be NaN");
+tests.isNotANumber(squaredNumber(NaN), NaN, "Squared number of NaN should be NaN");
 // Edge Cases

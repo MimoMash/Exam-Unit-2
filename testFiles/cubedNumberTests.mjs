@@ -15,3 +15,4 @@ tests.isNotANumber(cubedNumber(undefined), "Cubed number of undefined should be 
 // Edge Cases
 tests.isEqual(cubedNumber(Infinity), Infinity, "Cubed number of Infinity should be Infinity");
 tests.isEqual(cubedNumber(-Infinity), -Infinity, "Cubed number of -Infinity should be -Infinity");
+tests.isEqual(cubedNumber(0), 0, "Cubed number of 0 should be 0");

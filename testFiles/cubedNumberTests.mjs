@@ -11,4 +11,5 @@ tests.isEqual(cubedNumber(2.5), 15.625, "Cubed number of 2.5 should be 15.625");
 // Invalid Inputs
 tests.isNotANumber(cubedNumber(null), "Cubed number of null should be NaN");
 tests.isNotANumber(cubedNumber(NaN), "Cubed number of NaN should be NaN");
+tests.isNotANumber(cubedNumber(undefined), "Cubed number of undefined should be NaN");
 // Edge Cases

@@ -55,7 +55,14 @@ function areaOfCircle(radius) {
     return area;
 }
 
+function greetings(name) {
+    if (typeof name !== "string") {
+        return "Hello!";
+    }
+    return "Hello " + name;
+}
+
 const squaredNumber = makePowerFunction(2);
 const cubedNumber = makePowerFunction(3);
 
-export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle }
+export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle, greetings }

@@ -7,6 +7,7 @@ const tests = test("Root Function");
 tests.isEqual(root(4), 2, "Square root of 4 is 2");
 tests.isEqual(root(9), 3, "Square root of 9 is 3");
 tests.isEqual(root(1), 1, "Square root of 1 is 1");
+tests.isEqual(root(2.5), 1.58114, "Square root of 2.5 is 1.58114");
 // Invalid Inputs
 tests.isNotANumber(root(undefined), "Undefined should return NaN");
 tests.isNotANumber(root(null), "Null should return NaN");

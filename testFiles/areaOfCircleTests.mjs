@@ -10,4 +10,5 @@ tests.isEqual(areaOfCircle(2.5), 19.625, "Area of a circle with radius 2.5 shoul
 // Invalid Inputs
 tests.isNotANumber(areaOfCircle(null), "Area of a circle with radius null should be NaN");
 tests.isNotANumber(areaOfCircle(NaN), "Area of a circle with radius NaN should be NaN");
+tests.isNotANumber(areaOfCircle(undefined), "Area of a circle with radius undefined should be NaN");
 // Edge Cases

@@ -9,5 +9,5 @@ tests.isEqual(cubedNumber(4), 64, "Cubed number of 4 should be 64");
 tests.isEqual(cubedNumber(-3), -27, "Cubed number of -3 should be -27");
 tests.isEqual(cubedNumber(2.5), 15.625, "Cubed number of 2.5 should be 15.625");
 // Invalid Inputs
-
+tests.isNotANumber(cubedNumber(null), "Cubed number of null should be NaN");
 // Edge Cases

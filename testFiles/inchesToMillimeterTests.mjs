@@ -15,3 +15,4 @@ tests.isNotANumber(inchesToMillimeter(undefined), "Undefined should be NaN");
 //Edge Cases
 tests.isEqual(inchesToMillimeter(Infinity), Infinity, "Infinity inches is Infinity mm");
 tests.isEqual(inchesToMillimeter(-Infinity), Infinity, "-Infinity inches should be Infinity");
+tests.isEqual(inchesToMillimeter(0), 0, "0 inches is 0 mm");

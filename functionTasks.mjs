@@ -45,5 +45,6 @@ function root(number) {
 }
 
 const squaredNumber = makePowerFunction(2);
+const cubedNumber = makePowerFunction(3);
 
-export { squaredNumber, inchesToMillimeter, root }
+export { squaredNumber, inchesToMillimeter, root, cubedNumber }

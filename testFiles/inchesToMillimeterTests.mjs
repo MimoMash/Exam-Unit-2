@@ -7,6 +7,7 @@ const tests = test("Inches to Millimeter Function");
 tests.isEqual(inchesToMillimeter(2), 50.8, "2 inches is 50.8 mm");
 tests.isEqual(inchesToMillimeter(4), 101.6, "4 inches is 101.6 mm");
 tests.isEqual(inchesToMillimeter(2.5), 63.5, "2.5 inches is 63.5 mm");
+tests.isEqual(inchesToMillimeter(-2), 50.8, "-2 inches should be 50.8 mm");
 //Invalid Inputs
 tests.isNotANumber(inchesToMillimeter("2"), "'2' inches should be NaN");
 tests.isNotANumber(inchesToMillimeter(null), "Null should be NaN");

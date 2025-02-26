@@ -10,5 +10,6 @@ tests.isEqual(inchesToMillimeter(2.5), 63.5, "2.5 inches is 63.5 mm");
 //Invalid Inputs
 tests.isNotANumber(inchesToMillimeter("2"), "'2' inches should be NaN");
 tests.isNotANumber(inchesToMillimeter(null), "Null should be NaN");
+tests.isNotANumber(inchesToMillimeter(NaN), "NaN should be NaN");
 
 //Edge Cases

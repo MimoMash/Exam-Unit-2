@@ -34,7 +34,11 @@ function root(number) {
         guess = (guess + number / guess) / 2;
     }
 
-    return guess;
+    let multiplier = 100000;
+    let value = guess * multiplier + 0.5; 
+    let roundedNumber = (value - (value % 1)) / multiplier; 
+
+    return roundedNumber;
 }
 
 const squaredNumber = makePowerFunction(2);

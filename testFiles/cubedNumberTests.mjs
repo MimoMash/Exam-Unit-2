@@ -14,3 +14,4 @@ tests.isNotANumber(cubedNumber(NaN), "Cubed number of NaN should be NaN");
 tests.isNotANumber(cubedNumber(undefined), "Cubed number of undefined should be NaN");
 // Edge Cases
 tests.isEqual(cubedNumber(Infinity), Infinity, "Cubed number of Infinity should be Infinity");
+tests.isEqual(cubedNumber(-Infinity), -Infinity, "Cubed number of -Infinity should be -Infinity");

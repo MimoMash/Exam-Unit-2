@@ -16,3 +16,4 @@ tests.isNotANumber(areaOfCircle("3"), "Area of a circle with string '3' should b
 // Edge Cases
 tests.isEqual(areaOfCircle(Infinity), Infinity, "Area of a circle with an infinite radius should be Infinity");
 tests.isEqual(areaOfCircle(-Infinity), NaN, "Area of a circle with an -infinite radius should be NaN");
+tests.isEqual(areaOfCircle(0), 0, "Area of a circle with radius 0 should be 0");

@@ -12,4 +12,5 @@ tests.isNotANumber(areaOfCircle(null), "Area of a circle with radius null should
 tests.isNotANumber(areaOfCircle(NaN), "Area of a circle with radius NaN should be NaN");
 tests.isNotANumber(areaOfCircle(undefined), "Area of a circle with radius undefined should be NaN");
 tests.isNotANumber(areaOfCircle(-5), "Area of a circle with negative radius should be NaN");
+tests.isNotANumber(areaOfCircle("3"), "Area of a circle with string '3' should be NaN");
 // Edge Cases

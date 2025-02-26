@@ -59,6 +59,10 @@ function greetings(name) {
     if (typeof name !== "string") {
         return "Hello!";
     }
+
+    if (name === "") {
+        return "Hello!";
+    }
     return "Hello " + name;
 }
 

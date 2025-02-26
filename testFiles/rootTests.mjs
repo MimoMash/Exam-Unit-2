@@ -15,3 +15,4 @@ tests.isNotANumber(root(NaN), "NaN should return NaN");
 tests.isNotANumber(root("4"), "'4' should return NaN");
 // Edge Cases
 tests.isEqual(root(Infinity), Infinity, "Square root of Infinity is Infinity");
+tests.isEqual(root(-Infinity), NaN, "-Infinity should return NaN");

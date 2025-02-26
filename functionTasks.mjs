@@ -14,6 +14,11 @@ function inchesToMillimeter(inches) {
     if (typeof inches !== "number" || isNaN(inches)) {
         return NaN;
     } 
+
+    if (inches < 0) {
+        inches *= -1;
+    }
+
     return inches * 25.4;
 }
 

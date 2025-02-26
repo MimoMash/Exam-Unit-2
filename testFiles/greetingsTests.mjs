@@ -9,4 +9,5 @@ tests.isEqual(greetings("Mary Jane"), "Hello Mary Jane", "Greeting 'Mary Jane' s
 // Invalid Inputs
 tests.isEqual(greetings(""), "Hello!", "Empty string should return 'Hello!'");
 tests.isEqual(greetings(null), "Hello!", "Null should return 'Hello!'");
+tests.isEqual(greetings(undefined), "Hello!", "Undefined should return 'Hello!'");
 // Edge Cases

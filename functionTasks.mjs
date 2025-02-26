@@ -44,7 +44,18 @@ function root(number) {
     return roundedNumber;
 }
 
+function areaOfCircle(radius) {
+    if (typeof radius !== "number" || isNaN(radius) || radius < 0) {
+        return NaN;
+    }
+
+    const PI = 3.14;
+    const area = PI * radius * radius;
+
+    return area;
+}
+
 const squaredNumber = makePowerFunction(2);
 const cubedNumber = makePowerFunction(3);
 
-export { squaredNumber, inchesToMillimeter, root, cubedNumber }
+export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle }

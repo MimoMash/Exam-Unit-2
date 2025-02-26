@@ -11,6 +11,9 @@ function makePowerFunction(exponent) {
 }
 
 function inchesToMillimeter(inches) {
+    if (typeof inches !== "number" || isNaN(inches)) {
+        return NaN;
+    } 
     return inches * 25.4;
 }
 

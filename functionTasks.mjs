@@ -27,6 +27,9 @@ function root(number) {
         return NaN;
     }
 
+    if (number === Infinity) {
+        return Infinity;
+    }
     let guess = number / 2;
     let precision = 0.00001; 
     

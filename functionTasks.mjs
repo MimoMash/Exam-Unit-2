@@ -22,6 +22,21 @@ function inchesToMillimeter(inches) {
     return inches * 25.4;
 }
 
+function root(number) {
+    if (typeof number !== "number" || isNaN(number) || number < 0) {
+        return NaN;
+    }
+
+    let guess = number / 2;
+    let precision = 0.00001; 
+    
+    while ((guess * guess - number > precision) || (number - guess * guess > precision)) {
+        guess = (guess + number / guess) / 2;
+    }
+
+    return guess;
+}
+
 const squaredNumber = makePowerFunction(2);
 
-export { squaredNumber, inchesToMillimeter }
+export { squaredNumber, inchesToMillimeter, root }

@@ -11,4 +11,5 @@ tests.isEqual(root(1), 1, "Square root of 1 is 1");
 tests.isNotANumber(root(undefined), "Undefined should return NaN");
 tests.isNotANumber(root(null), "Null should return NaN");
 tests.isNotANumber(root(NaN), "NaN should return NaN");
+tests.isNotANumber(root("4"), "'4' should return NaN");
 // Edge Cases

@@ -66,7 +66,24 @@ function greetings(name) {
     return "Hello " + name;
 }
 
+function flattenArray(arr) {
+    let result = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === "number") {
+            result[result.length] = arr[i]; 
+        } else if (Array.isArray(arr[i])) {
+            let flat = flattenArray(arr[i]); 
+            for (let j = 0; j < flat.length; j++) {
+                result[result.length] = flat[j];
+            }
+        }
+    }
+
+    return result;
+}
+
 const squaredNumber = makePowerFunction(2);
 const cubedNumber = makePowerFunction(3);
 
-export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle, greetings }
+export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle, greetings, flattenArray }

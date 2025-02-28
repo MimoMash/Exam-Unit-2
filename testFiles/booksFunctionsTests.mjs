@@ -1,5 +1,5 @@
 import { books } from "../moduleSkillSummary_assignment-main/example_files/index.mjs"
-import { booksStartingWithThe, countBooksAfter1992, countBooksBefore2004, booksByAuthorsWithT, getISBNsByAuthor } from "../functionTasks.mjs"
+import { booksStartingWithThe, countBooksAfter1992, countBooksBefore2004, booksByAuthorsWithT, getISBNsByAuthor, sortBooksByTitle } from "../functionTasks.mjs"
 import test from "./test.mjs"
 
 // Book Functions
@@ -10,6 +10,7 @@ console.log(booksByAuthorsWithT(books));
 console.log(countBooksAfter1992(books));
 console.log(countBooksBefore2004(books));
 console.log(getISBNsByAuthor(books, "Terry Pratchett"));
+console.log(sortBooksByTitle(books, "ascending"));
 // Invalid Inputs
 
 // Edge Cases

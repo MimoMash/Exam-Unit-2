@@ -120,7 +120,7 @@ function booksStartingWithThe(books) {
             books[i].title[2] === "e" &&
             (books[i].title.length === 3 || books[i].title[3] === " ")
         ) {
-            result[result.length] = books[i];
+            result[result.length] = books[i].title;
         }
     }
     return result;

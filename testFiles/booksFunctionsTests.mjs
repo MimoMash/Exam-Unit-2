@@ -8,6 +8,7 @@ const tests = test("Book Functions");
 console.log(booksStartingWithThe(books));
 console.log(booksByAuthorsWithT(books));
 console.log(countBooksAfter1992(books));
+console.log(countBooksBefore2004(books));
 // Invalid Inputs
 
 // Edge Cases

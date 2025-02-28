@@ -168,7 +168,20 @@ function countBooksBefore2004(books) {
     return count;
 }
 
+function getISBNsByAuthor(books, author) {
+    let isbns = [];
+    
+    for (let i = 0; i < books.length; i++) {
+        let currentBook = books[i];
+        if (currentBook.author === author) {
+            isbns[isbns.length] = currentBook.isbn;
+        }
+    }
+
+    return isbns;
+}
+
 const squaredNumber = makePowerFunction(2);
 const cubedNumber = makePowerFunction(3);
 
-export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle, greetings, flattenArray, structureStats, booksStartingWithThe, booksByAuthorsWithT, countBooksAfter1992, countBooksBefore2004 }
+export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle, greetings, flattenArray, structureStats, booksStartingWithThe, booksByAuthorsWithT, countBooksAfter1992, countBooksBefore2004, getISBNsByAuthor }

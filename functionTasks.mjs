@@ -83,7 +83,34 @@ function flattenArray(arr) {
     return result;
 }
 
+function structureStats(node) {
+    let sum = 0;
+    let deepestLevel = 0;
+    let nodeCount = 0;
+
+    function search(node, level) {
+        if (!node) return;
+
+        sum += node.value;
+        nodeCount++;
+        if (level > deepestLevel) {
+            deepestLevel = level;
+        }
+
+        search(node.left, level + 1);
+        search(node.right, level + 1);
+    }
+
+    search(node, 1);
+
+    return {
+        sum: sum,
+        deepestLevel: deepestLevel,
+        nodeCount: nodeCount
+    };
+}
+
 const squaredNumber = makePowerFunction(2);
 const cubedNumber = makePowerFunction(3);
 
-export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle, greetings, flattenArray }
+export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle, greetings, flattenArray, structureStats }

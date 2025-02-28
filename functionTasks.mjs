@@ -204,7 +204,32 @@ function sortBooksByTitle(books, order) {
     
     return sortedTitles;
 }
+
+function sortBooksByYear(books, order) {
+    let n = books.length;
+    
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n - 1; j++) {
+            let yearA = books[j].publication_year;
+            let yearB = books[j + 1].publication_year;
+
+            if ((order === "ascending" && yearA > yearB) || (order === "descending" && yearA < yearB)) {
+                let temp = books[j];
+                books[j] = books[j + 1];
+                books[j + 1] = temp;
+            }
+        }
+    }
+
+    let sortedTitles = [];
+    for (let i = 0; i < n; i++) {
+        sortedTitles[i] = { title: books[i].title, year: books[i].publication_year };
+    }
+    
+    return sortedTitles;
+}
+
 const squaredNumber = makePowerFunction(2);
 const cubedNumber = makePowerFunction(3);
 
-export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle, greetings, flattenArray, structureStats, booksStartingWithThe, booksByAuthorsWithT, countBooksAfter1992, countBooksBefore2004, getISBNsByAuthor, sortBooksByTitle }
+export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle, greetings, flattenArray, structureStats, booksStartingWithThe, booksByAuthorsWithT, countBooksAfter1992, countBooksBefore2004, getISBNsByAuthor, sortBooksByTitle, sortBooksByYear }

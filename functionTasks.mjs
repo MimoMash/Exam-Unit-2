@@ -181,7 +181,26 @@ function getISBNsByAuthor(books, author) {
     return isbns;
 }
 
+function sortBooksByTitle(books, order) {
+    let n = books.length;
+    
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n - 1; j++) {
+            let titleA = books[j].title;
+            let titleB = books[j + 1].title;
+
+            if ((order === "ascending" && titleA > titleB) || (order === "descending" && titleA < titleB)) {
+                let temp = books[j];
+                books[j] = books[j + 1];
+                books[j + 1] = temp;
+            }
+        }
+    }
+    
+    return books;
+}
+
 const squaredNumber = makePowerFunction(2);
 const cubedNumber = makePowerFunction(3);
 
-export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle, greetings, flattenArray, structureStats, booksStartingWithThe, booksByAuthorsWithT, countBooksAfter1992, countBooksBefore2004, getISBNsByAuthor }
+export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle, greetings, flattenArray, structureStats, booksStartingWithThe, booksByAuthorsWithT, countBooksAfter1992, countBooksBefore2004, getISBNsByAuthor, sortBooksByTitle }

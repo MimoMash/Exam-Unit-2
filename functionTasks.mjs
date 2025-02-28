@@ -142,7 +142,20 @@ function booksByAuthorsWithT(books) {
     return result;
 }
 
+function countBooksAfter1992(books) {
+    let count = 0;
+
+    for (let i = 0; i < books.length; i++) {
+        let year = books[i].publication_year;
+        if (year > 1992) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
 const squaredNumber = makePowerFunction(2);
 const cubedNumber = makePowerFunction(3);
 
-export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle, greetings, flattenArray, structureStats, booksStartingWithThe, booksByAuthorsWithT }
+export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle, greetings, flattenArray, structureStats, booksStartingWithThe, booksByAuthorsWithT, countBooksAfter1992 }

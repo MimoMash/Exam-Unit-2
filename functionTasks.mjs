@@ -126,7 +126,23 @@ function booksStartingWithThe(books) {
     return result;
 }
 
+function booksByAuthorsWithT(books) {
+    let result = [];
+
+    for (let i = 0; i < books.length; i++) {
+        let author = books[i].author;
+        for (let j = 0; j < author.length; j++) {
+            if (author[j] === "t" || author[j] === "T") {
+                result[result.length] = books[i];
+                break; 
+            }
+        }
+    }
+
+    return result;
+}
+
 const squaredNumber = makePowerFunction(2);
 const cubedNumber = makePowerFunction(3);
 
-export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle, greetings, flattenArray, structureStats, booksStartingWithThe }
+export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle, greetings, flattenArray, structureStats, booksStartingWithThe, booksByAuthorsWithT }

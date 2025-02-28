@@ -6,6 +6,7 @@ import test from "./test.mjs"
 const tests = test("Book Functions");
 // Valid Inputs
 console.log(booksStartingWithThe(books));
+console.log(booksByAuthorsWithT(books));
 // Invalid Inputs
 
 // Edge Cases

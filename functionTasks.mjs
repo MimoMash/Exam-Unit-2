@@ -196,10 +196,14 @@ function sortBooksByTitle(books, order) {
             }
         }
     }
-    
-    return books;
-}
 
+    let sortedTitles = [];
+    for (let i = 0; i < n; i++) {
+        sortedTitles[i] = books[i].title;
+    }
+    
+    return sortedTitles;
+}
 const squaredNumber = makePowerFunction(2);
 const cubedNumber = makePowerFunction(3);
 

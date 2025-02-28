@@ -110,7 +110,23 @@ function structureStats(node) {
     };
 }
 
+function booksStartingWithThe(books) {
+    let result = [];
+    for (let i = 0; i < books.length; i++) {
+        if (
+            books[i].title.length >= 3 &&
+            books[i].title[0] === "T" &&
+            books[i].title[1] === "h" &&
+            books[i].title[2] === "e" &&
+            (books[i].title.length === 3 || books[i].title[3] === " ")
+        ) {
+            result[result.length] = books[i];
+        }
+    }
+    return result;
+}
+
 const squaredNumber = makePowerFunction(2);
 const cubedNumber = makePowerFunction(3);
 
-export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle, greetings, flattenArray, structureStats }
+export { squaredNumber, inchesToMillimeter, root, cubedNumber, areaOfCircle, greetings, flattenArray, structureStats, booksStartingWithThe }

@@ -133,7 +133,7 @@ function booksByAuthorsWithT(books) {
         let author = books[i].author;
         for (let j = 0; j < author.length; j++) {
             if (author[j] === "t" || author[j] === "T") {
-                result[result.length] = books[i];
+                result[result.length] = books[i].title;
                 break; 
             }
         }
